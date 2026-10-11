@@ -27,10 +27,10 @@ const About: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-200 leading-relaxed font-normal" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
-            I'm <strong className="font-semibold text-black dark:text-white">Abbas Raza</strong>, a <strong className="font-semibold text-black dark:text-white">software engineer</strong> building scalable systems across web applications, mobile applications, and automation. As a final year student at COMSATS University Islamabad, I work across the full product lifecycle, connecting intuitive user experiences with reliable backends and resilient architectures.
+            I'm <strong className="font-semibold text-black dark:text-white">Abbas Raza</strong>, a <strong className="font-semibold text-black dark:text-white">software engineer</strong> focused on scalable systems, resilient architectures, and end-to-end product engineering across web, mobile, and automation.
           </p>
           <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-200 leading-relaxed font-normal" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
-            My work spans <strong className="font-semibold text-black dark:text-white">web platforms, cross-platform mobile apps, and automated workflows</strong>. I use React, Flutter, FastAPI, and PostgreSQL to build responsive interfaces, design APIs and data models, and connect services through dependable integrations. I focus on clean architecture, maintainable code, and systems that can grow with the product, from the first working feature to a reliable application.
+            My approach centers on <strong className="font-semibold text-black dark:text-white">domain-driven design, modular service boundaries, and workflow orchestration</strong>, with an emphasis on data integrity, fault tolerance, observability, and operational scalability.
           </p>
           <div className="pt-4 text-base text-neutral-500 dark:text-neutral-400 italic border-t border-neutral-200 dark:border-neutral-800">
             “Fate’s been written, so I’ve decided to rewrite the code.      - Abbas Raza”
