@@ -1,10 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Github, 
   Linkedin, 
-  Mail, 
-  FileText, 
   MapPin, 
   Sparkles,
   ArrowDown
@@ -12,16 +9,7 @@ import {
 
 const Hero: React.FC = () => {
   const quickLinks = [
-    { href: 'https://github.com/abbasrazaswe', label: 'GitHub', icon: Github, external: true },
     { href: 'https://www.linkedin.com/in/abbasrazaswe', label: 'LinkedIn', icon: Linkedin, external: true },
-    { href: 'mailto:sabbasraza001@gmail.com', label: 'Email', icon: Mail, external: true },
-    { href: '#resume', label: 'CV', icon: FileText, external: false },
-  ];
-
-  const sitePills = [
-    { href: '#projects', label: '6 Featured Projects' },
-    { href: '#experience', label: 'Horquva &bull; Eynvision' },
-    { href: '#skills', label: 'Product &bull; Systems &bull; Software' },
   ];
 
   return (
@@ -72,22 +60,8 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          {/* Subtle outer breathing glow ring */}
-          <motion.div
-            className="absolute -inset-3 rounded-full bg-gradient-to-tr from-cyan-500/20 via-neutral-300/30 to-blue-500/20 dark:from-cyan-400/20 dark:via-neutral-700/30 dark:to-blue-400/20 blur-xl pointer-events-none"
-            animate={{
-              scale: [1, 1.08, 1],
-              opacity: [0.4, 0.8, 0.4],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-
           {/* Profile Avatar Card with sleek double gradient border */}
-          <div className="relative p-1 rounded-full bg-gradient-to-tr from-neutral-200 via-neutral-100 to-neutral-300 dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900 shadow-2xl">
+          <div className="relative p-1 rounded-full bg-gradient-to-tr from-neutral-200 via-neutral-100 to-neutral-300 dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-900">
             <div className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden p-1 bg-white dark:bg-black ring-2 ring-neutral-200 dark:ring-neutral-800">
               <img
                 src="/profile.png"
@@ -96,16 +70,6 @@ const Hero: React.FC = () => {
               />
             </div>
 
-            {/* Live Status Chip anchored to avatar */}
-            <motion.div
-              className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md border border-neutral-200 dark:border-neutral-700 rounded-full shadow-lg text-xs font-medium text-neutral-800 dark:text-neutral-200 whitespace-nowrap"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Available for Work</span>
-            </motion.div>
           </div>
 
           {/* Location & Quick Meta */}
@@ -173,20 +137,8 @@ const Hero: React.FC = () => {
             className="text-base md:text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-8"
             style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}
           >
-            Bridging product engineering, systems engineering, and software engineering — building resilient architectures, scalable backends, and intuitive cross-platform applications
+            Building products, systems, and software with resilient architectures, scalable backends, and intuitive cross-platform mobile applications.
           </p>
-
-          {/* Quick Info Badges linking to rest of site */}
-          <div className="flex flex-wrap justify-center items-center gap-2.5 mb-10 max-w-xl mx-auto">
-            {sitePills.map((pill) => (
-              <a
-                key={pill.href}
-                href={pill.href}
-                className="px-3.5 py-1.5 rounded-full bg-neutral-50 dark:bg-neutral-900/80 border border-neutral-200/90 dark:border-neutral-800 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200 shadow-sm"
-                dangerouslySetInnerHTML={{ __html: pill.label }}
-              />
-            ))}
-          </div>
 
           {/* Primary CTA Buttons */}
           <div className="flex items-center justify-center gap-4 flex-wrap">
