@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowDown } from 'lucide-react';
+import { Sparkles, ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const socialLinks = [
+    { label: 'GitHub', href: 'https://github.com/abbasrazaswe', icon: Github },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abbasrazaswe', icon: Linkedin },
+    { label: 'Email', href: 'mailto:sabbasraza001@gmail.com', icon: Mail },
+  ];
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-black relative overflow-hidden pt-28 pb-16">
       {/* 
@@ -60,6 +66,23 @@ const Hero: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
+          </div>
+          <div className="mt-4 flex items-center justify-center gap-2">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                target={label === 'Email' ? undefined : '_blank'}
+                rel={label === 'Email' ? undefined : 'noopener noreferrer'}
+                className="group relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black transition-colors"
+              >
+                <Icon className="h-4 w-4" aria-hidden="true" />
+                <span aria-hidden="true" className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-900 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 dark:bg-neutral-100 dark:text-black transition-opacity">
+                  {label}
+                </span>
+              </a>
+            ))}
           </div>
         </motion.div>
 
