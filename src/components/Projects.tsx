@@ -21,12 +21,11 @@ const Projects: React.FC = () => {
       github: 'https://github.com/abbasrazaswe/HireFly.ai',
     },
     {
-      title: 'TradeX',
-      subtitle: 'Stock Trading Simulator',
-      description: 'Single-page web application for simulating stock trading on the NYSE. Features user auth, dynamic pricing, and real-time portfolio analytics with interactive charts.',
-      tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS'],
-      github: 'https://github.com/abbasrazaswe/TradeX',
-      live: 'https://trade-x-beta-plum.vercel.app',
+      title: 'Cash Pilot',
+      subtitle: 'Personal Finance & Expense Tracker',
+      description: 'Modern cross-platform mobile application built with Flutter and Dart for personal finance management. Features real-time income and expense tracking, interactive analytics with fl_chart, and reactive state management.',
+      tech: ['Flutter', 'Dart', 'Provider', 'FL Chart'],
+      github: 'https://github.com/abbasrazaswe/cash-pilot',
     },
     {
       title: 'ML Based Face Recognition Attendance System',
@@ -43,19 +42,20 @@ const Projects: React.FC = () => {
       github: 'https://github.com/abbasrazaswe/memoirproject-ai-backend',
     },
     {
+      title: 'TradeX',
+      subtitle: 'Stock Trading Simulator',
+      description: 'Single-page web application for simulating stock trading on the NYSE. Features user auth, dynamic pricing, and real-time portfolio analytics with interactive charts.',
+      tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS'],
+      github: 'https://github.com/abbasrazaswe/TradeX',
+      live: 'https://trade-x-beta-plum.vercel.app',
+    },
+    {
       title: 'Boring Weather App',
       subtitle: 'Interactive Weather & Forecast',
       description: 'Responsive weather dashboard providing current conditions, temperature, humidity, and 5-day forecasts worldwide with persistent local search history.',
       tech: ['JavaScript', 'HTML5', 'CSS3', 'OpenWeather API'],
       github: 'https://github.com/abbasrazaswe/Boring-Weather-App',
       live: 'https://abbasrazaswe.github.io/Boring-Weather-App/',
-    },
-    {
-      title: 'Cash Pilot',
-      subtitle: 'Personal Finance & Expense Tracker',
-      description: 'Modern cross-platform mobile application built with Flutter and Dart for personal finance management. Features real-time income and expense tracking, interactive analytics with fl_chart, and reactive state management.',
-      tech: ['Flutter', 'Dart', 'Provider', 'FL Chart'],
-      github: 'https://github.com/abbasrazaswe/cash-pilot',
     },
   ];
 
