@@ -1,17 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Linkedin, 
-  MapPin, 
-  Sparkles,
-  ArrowDown
-} from 'lucide-react';
+import { Sparkles, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const quickLinks = [
-    { href: 'https://www.linkedin.com/in/abbasrazaswe', label: 'LinkedIn', icon: Linkedin, external: true },
-  ];
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-black relative overflow-hidden pt-28 pb-16">
       {/* 
@@ -69,31 +60,6 @@ const Hero: React.FC = () => {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-
-          </div>
-
-          {/* Location & Quick Meta */}
-          <div className="mt-5 flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 font-mono">
-            <MapPin className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />
-            <span>Islamabad, Pakistan</span>
-            <span className="text-neutral-300 dark:text-neutral-700">&bull;</span>
-            <span className="text-neutral-600 dark:text-neutral-300 font-medium">COMSATS Final Year</span>
-          </div>
-
-          {/* Quick Action Links Bar */}
-          <div className="mt-3.5 flex items-center gap-2 flex-wrap justify-center">
-            {quickLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noopener noreferrer' : undefined}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-600 hover:scale-105 transition-all duration-200 shadow-sm"
-              >
-                <link.icon className="w-3.5 h-3.5" />
-                <span>{link.label}</span>
-              </a>
-            ))}
           </div>
         </motion.div>
 
