@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
       description: 'Single-page web application for simulating stock trading on the NYSE. Features user auth, dynamic pricing, and real-time portfolio analytics with interactive charts.',
       tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS'],
       github: 'https://github.com/abbasrazaswe/TradeX',
-      live: 'https://tradex-six-rho.vercel.app',
+      live: 'https://trade-x-beta-plum.vercel.app',
     },
     {
       title: 'ML Based Face Recognition Attendance System',
