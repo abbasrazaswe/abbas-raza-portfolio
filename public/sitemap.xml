@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://abbas-raza-portfolio-chi.vercel.app/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://iabbasraza.vercel.app/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/hirefly/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/cash-pilot/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/face-recognition/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/memoir/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/tradex/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://iabbasraza.vercel.app/projects/boring-weather/</loc><lastmod>2026-10-12</lastmod></url>
 </urlset>

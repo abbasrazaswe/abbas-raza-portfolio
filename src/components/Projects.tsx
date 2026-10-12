@@ -1,63 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
-
-interface Project {
-  title: string;
-  subtitle: string;
-  description: string;
-  tech: string[];
-  github: string;
-  live?: string;
-}
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
+import { projects } from '../data/projects';
 
 const Projects: React.FC = () => {
-  const projects: Project[] = [
-    {
-      title: 'HireFly.ai',
-      subtitle: 'AI Interview & Recruitment Platform',
-      description: 'Intelligent cross-platform mobile application built with Flutter and Dart, enabling candidates to explore jobs, practice interviews, and receive AI evaluations, with Firebase auth and realtime data.',
-      tech: ['Flutter', 'Dart', 'Firebase', 'State Management'],
-      github: 'https://github.com/abbasrazaswe/HireFly.ai',
-    },
-    {
-      title: 'Cash Pilot',
-      subtitle: 'Personal Finance & Expense Tracker',
-      description: 'Modern cross-platform mobile application built with Flutter and Dart for personal finance management. Features real-time income and expense tracking, interactive analytics with fl_chart, and reactive state management.',
-      tech: ['Flutter', 'Dart', 'Provider', 'FL Chart'],
-      github: 'https://github.com/abbasrazaswe/cash-pilot',
-    },
-    {
-      title: 'ML Based Face Recognition Attendance System',
-      subtitle: 'Facial Recognition Attendance System',
-      description: 'Real-time biometric attendance system using FaceNet deep learning embeddings, OpenCV webcam capture, and automated SQLite database logging with GUI.',
-      tech: ['Python', 'FaceNet', 'OpenCV', 'SQLite'],
-      github: 'https://github.com/abbasrazaswe/face-rec',
-    },
-    {
-      title: 'Memoir AI Backend',
-      subtitle: 'Scalable Microservices Architecture',
-      description: 'Layered FastAPI microservices backend architecture implementing clean domain-driven design and asynchronous endpoints for AI-driven memory journaling.',
-      tech: ['FastAPI', 'Python', 'REST APIs', 'Clean Architecture'],
-      github: 'https://github.com/abbasrazaswe/memoirproject-ai-backend',
-    },
-    {
-      title: 'TradeX',
-      subtitle: 'Stock Trading Simulator',
-      description: 'Single-page web application for simulating stock trading on the NYSE. Features user auth, dynamic pricing, and real-time portfolio analytics with interactive charts.',
-      tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS'],
-      github: 'https://github.com/abbasrazaswe/TradeX',
-      live: 'https://trade-x-beta-plum.vercel.app',
-    },
-    {
-      title: 'Boring Weather App',
-      subtitle: 'Interactive Weather & Forecast',
-      description: 'Responsive weather dashboard providing current conditions, temperature, humidity, and 5-day forecasts worldwide with persistent local search history.',
-      tech: ['JavaScript', 'HTML5', 'CSS3', 'OpenWeather API'],
-      github: 'https://github.com/abbasrazaswe/Boring-Weather-App',
-      live: 'https://abbasrazaswe.github.io/Boring-Weather-App/',
-    },
-  ];
 
   return (
     <section id="projects" className="py-24 bg-white dark:bg-black">
@@ -85,7 +31,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              className="group bg-neutral-50 dark:bg-neutral-900 rounded-2xl shadow-lg p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl border border-neutral-200/50 dark:border-neutral-800/50"
+              className="group relative bg-neutral-50 dark:bg-neutral-900 rounded-2xl shadow-lg p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl border border-neutral-200/50 dark:border-neutral-800/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -95,7 +41,7 @@ const Projects: React.FC = () => {
               <div>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-semibold text-black dark:text-white tracking-tight" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
-                    {project.title}
+                    <a href={`/projects/${project.slug}/`} className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-neutral-500 focus-visible:after:rounded-2xl">{project.title}</a>
                   </h3>
                 </div>
                 <div className="text-xs font-medium text-neutral-500 dark:text-neutral-400 mb-3">
@@ -118,7 +64,10 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-4 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+                <div className="relative z-10 flex flex-wrap items-center gap-4 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+                  <a href={`/projects/${project.slug}/`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:underline">
+                    <span>Read project</span><ArrowRight className="w-4 h-4" />
+                  </a>
                   <a
                     href={project.github}
                     target="_blank"
