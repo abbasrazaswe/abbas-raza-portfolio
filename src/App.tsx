@@ -25,7 +25,7 @@ function App() {
 
   if (loading) return <Preloader />;
 
-  if (isProjectPage) return <ThemeProvider><ProjectPage /></ThemeProvider>;
+  if (isProjectPage) return <ThemeProvider><ProjectPage /><Footer /></ThemeProvider>;
 
   return (
     <ThemeProvider>
