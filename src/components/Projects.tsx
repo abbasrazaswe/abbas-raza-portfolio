@@ -10,10 +10,10 @@ const Projects: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
             Projects
@@ -32,10 +32,10 @@ const Projects: React.FC = () => {
             <motion.div
               key={project.title}
               className="group relative bg-neutral-50 dark:bg-neutral-900 rounded-2xl shadow-lg p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl border border-neutral-200/50 dark:border-neutral-800/50"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.16), ease: 'easeOut' }}
+              viewport={{ once: true, margin: "200px 0px 0px 0px" }}
               whileHover={{ y: -8, scale: 1.02, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
             >
               <div>
@@ -99,8 +99,8 @@ const Projects: React.FC = () => {
           className="flex flex-col items-center justify-center py-8"
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
         >
           <motion.div
             className="mb-8 flex items-center justify-center"

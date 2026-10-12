@@ -40,10 +40,10 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-14"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
             Services
@@ -62,10 +62,10 @@ const Services: React.FC = () => {
             <motion.div
               key={service.title}
               className="group bg-neutral-50 dark:bg-neutral-900 border border-neutral-200/70 dark:border-neutral-800/80 rounded-2xl shadow-lg p-7 sm:p-8 flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-xl hover:border-neutral-300 dark:hover:border-neutral-700"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.16), ease: 'easeOut' }}
+              viewport={{ once: true, margin: "200px 0px 0px 0px" }}
               whileHover={{ y: -8, scale: 1.02, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
             >
               <div className="flex flex-col items-center">
@@ -90,8 +90,8 @@ const Services: React.FC = () => {
           className="mt-16 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <div className="inline-flex items-center gap-4 px-6 py-3 bg-neutral-50 dark:bg-neutral-900 rounded-full shadow border border-neutral-200 dark:border-neutral-800">
             <div className="flex items-center gap-2">

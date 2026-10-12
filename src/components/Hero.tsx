@@ -9,6 +9,18 @@ const Hero: React.FC = () => {
     { label: 'Email', href: 'mailto:sabbasraza001@gmail.com', icon: Mail },
   ];
 
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-black relative overflow-hidden pt-28 pb-16">
       {/* 
@@ -21,7 +33,7 @@ const Hero: React.FC = () => {
 
         {/* Soft breathing ambient glow orb 1 (top-left) */}
         <motion.div
-          className="absolute top-1/4 left-1/3 -translate-x-1/2 w-96 h-96 bg-blue-500/10 dark:bg-cyan-500/15 rounded-full blur-[100px]"
+          className="absolute top-1/4 left-1/3 -translate-x-1/2 w-96 h-96 bg-blue-500/10 dark:bg-cyan-500/15 rounded-full blur-[100px] transform-gpu will-change-transform"
           animate={{
             scale: [1, 1.15, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -35,7 +47,7 @@ const Hero: React.FC = () => {
 
         {/* Soft breathing ambient glow orb 2 (bottom-right) */}
         <motion.div
-          className="absolute bottom-1/4 right-1/3 translate-x-1/2 w-80 h-80 bg-neutral-300/25 dark:bg-neutral-700/20 rounded-full blur-[90px]"
+          className="absolute bottom-1/4 right-1/3 translate-x-1/2 w-80 h-80 bg-neutral-300/25 dark:bg-neutral-700/20 rounded-full blur-[90px] transform-gpu will-change-transform"
           animate={{
             scale: [1.12, 0.96, 1.12],
             opacity: [0.25, 0.5, 0.25],
@@ -49,7 +61,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
-        
+
         {/* MODERN PHOTO SECTION */}
         <motion.div
           className="relative flex flex-col items-center mb-6"
@@ -118,8 +130,7 @@ const Hero: React.FC = () => {
           <h2
             className="text-2xl md:text-3xl font-normal text-neutral-600 dark:text-neutral-300 mb-4"
             style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}
-          >
-            Polyglot Engineer
+          > Engineer
           </h2>
 
           <p
@@ -133,6 +144,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <motion.a
               href="#contact"
+              onClick={(e) => handleScrollTo(e, '#contact')}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold shadow-lg hover:shadow-xl transition-all duration-200 text-base"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.98 }}
@@ -143,6 +155,7 @@ const Hero: React.FC = () => {
 
             <motion.a
               href="#projects"
+              onClick={(e) => handleScrollTo(e, '#projects')}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-black dark:text-white font-semibold shadow hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all duration-200 text-base"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.98 }}

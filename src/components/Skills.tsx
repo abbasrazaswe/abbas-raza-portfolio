@@ -29,22 +29,20 @@ const Skills: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.05,
-        delayChildren: 0.2,
+        staggerChildren: 0.02,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 15, scale: 0.85 },
+    hidden: { opacity: 0, y: 10, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 20,
+        duration: 0.25,
+        ease: 'easeOut',
       },
     },
   };
@@ -71,10 +69,10 @@ const Skills: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <h2
             className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight"
@@ -92,7 +90,7 @@ const Skills: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           {/* Line 1 */}
           <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-2.5 sm:gap-3 w-full">

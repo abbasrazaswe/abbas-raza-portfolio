@@ -33,6 +33,9 @@
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
   }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
   html.dark {
     background-color: #000;
     color: #fff;

@@ -39,10 +39,10 @@ const Contact: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
             Contact
@@ -55,10 +55,10 @@ const Contact: React.FC = () => {
           {/* Left Column */}
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true, margin: "200px 0px 0px 0px" }}
           >
             <div>
               <h3 className="text-3xl font-semibold text-black dark:text-white mb-4" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}>
@@ -76,10 +76,10 @@ const Contact: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-neutral-100 dark:bg-neutral-900 rounded-full shadow hover:shadow-lg transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  viewport={{ once: true, margin: "200px 0px 0px 0px" }}
                   whileHover={{ scale: 1.12 }}
                   whileTap={{ scale: 0.96 }}
                 >
@@ -95,10 +95,10 @@ const Contact: React.FC = () => {
           </motion.div>
           {/* Right Column - Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true, margin: "200px 0px 0px 0px" }}
           >
             {isSubmitted ? (
               <motion.div

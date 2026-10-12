@@ -78,10 +78,10 @@ const Experience: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          viewport={{ once: true, margin: "200px 0px 0px 0px" }}
         >
           <h2
             className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 tracking-tight"
@@ -102,10 +102,10 @@ const Experience: React.FC = () => {
             <motion.div
               key={exp.company + exp.period}
               className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 rounded-2xl p-7 md:p-9 shadow-md hover:shadow-xl transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.16), ease: 'easeOut' }}
+              viewport={{ once: true, margin: "200px 0px 0px 0px" }}
               whileHover={{ y: -4 }}
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-5 pb-5 border-b border-neutral-200/70 dark:border-neutral-800/70">
