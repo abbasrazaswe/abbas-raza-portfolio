@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
           <h2
             className="text-2xl md:text-3xl font-normal text-neutral-600 dark:text-neutral-300 mb-4"
             style={{ fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' }}
-          > Engineer
+          > Software Engineer
           </h2>
 
           <p

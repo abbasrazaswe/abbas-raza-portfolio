@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid gap-10 py-12 md:grid-cols-[1.3fr_1fr_1.2fr] md:gap-8 md:py-14">
           <div>
             <a href="/#home" className="inline-block text-2xl font-semibold hover:text-neutral-500 transition-colors">Abbas Raza</a>
-            <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Polyglot Engineer</p>
+            <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Software Engineer</p>
             <p className="mt-5 text-sm text-neutral-600 dark:text-neutral-400">Products. Systems. Software.</p>
           </div>
           <nav aria-label="Footer navigation">
